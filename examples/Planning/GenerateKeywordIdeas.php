@@ -1,5 +1,5 @@
 <?php
-
+ 
 /**
  * Copyright 2018 Google LLC
  *
@@ -39,23 +39,23 @@ use Google\ApiCore\ApiException;
 /** This example generates keyword ideas from a list of seed keywords or a seed page URL. */
 class GenerateKeywordIdeas
 {
-    private const CUSTOMER_ID = 'INSERT_CUSTOMER_ID_HERE';
-    // Location criteria IDs. For example, specify 21167 for New York. For more information
-    // on determining this value, see
-    // https://developers.google.com/adwords/api/docs/appendix/geotargeting.
-    private const LOCATION_ID_1 = 'INSERT_LOCATION_ID_1_HERE';
-    private const LOCATION_ID_2 = 'INSERT_LOCATION_ID_2_HERE';
+    // private const CUSTOMER_ID = '6141669803';
+    // // Location criteria IDs. For example, specify 21167 for New York. For more information
+    // // on determining this value, see
+    // // https://developers.google.com/adwords/api/docs/appendix/geotargeting.
+    // private const LOCATION_ID_1 = '21156';
+    // private const LOCATION_ID_2 = '20440';
 
-    // A language criterion ID. For example, specify 1000 for English. For more information
-    // on determining this value, see
-    // https://developers.google.com/adwords/api/docs/appendix/codes-formats#languages.
-    private const LANGUAGE_ID = 'INSERT_LANGUAGE_ID_HERE';
+    // // A language criterion ID. For example, specify 1000 for English. For more information
+    // // on determining this value, see
+    // // https://developers.google.com/adwords/api/docs/appendix/codes-formats#languages.
+    // private const LANGUAGE_ID = '1000';
 
-    private const KEYWORD_TEXT_1 = 'INSERT_KEYWORD_TEXT_1_HERE';
-    private const KEYWORD_TEXT_2 = 'INSERT_KEYWORD_TEXT_2_HERE';
+    // private const KEYWORD_TEXT_1 = 'Jakarta';
+    // private const KEYWORD_TEXT_2 = 'Makan Enak';
 
-    // Optional: Specify a URL string related to your business to generate ideas.
-    private const PAGE_URL = null;
+    // // Optional: Specify a URL string related to your business to generate ideas.
+    // private const PAGE_URL = null;
 
     public static function main()
     {
@@ -130,11 +130,12 @@ class GenerateKeywordIdeas
     public static function runExample(
         GoogleAdsClient $googleAdsClient,
         int $customerId,
-        array $locationIds,
-        int $languageId,
-        array $keywords,
-        ?string $pageUrl
+        array $locationIds ,
+        int $languageId ,
+        array $keywords ,
+        ?string $pageUrl 
     ) {
+        
         $keywordPlanIdeaServiceClient = $googleAdsClient->getKeywordPlanIdeaServiceClient();
 
         // Make sure that keywords and/or page URL were specified. The request must have exactly one
@@ -195,9 +196,15 @@ class GenerateKeywordIdeas
                     0 : $result->getKeywordIdeaMetrics()->getCompetition(),
                 PHP_EOL
             );
+            
         }
+
+     
+       
     }
     // [END generate_keyword_ideas]
+
+  
 }
 
 GenerateKeywordIdeas::main();

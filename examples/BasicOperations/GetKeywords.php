@@ -36,7 +36,7 @@ use Google\ApiCore\ApiException;
 /** This example gets keywords from ad group criteria. */
 class GetKeywords
 {
-    private const CUSTOMER_ID = 'INSERT_CUSTOMER_ID_HERE';
+    private const CUSTOMER_ID = '6051738458';
     // Optional: Specify an ad group ID below to restrict search to only a given ad group.
     private const AD_GROUP_ID = null;
 

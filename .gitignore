@@ -2,3 +2,8 @@
 vendor
 /composer.lock
 /.phpunit.result.cache
+composer.json
+examples/Authentication/google_ads_php.ini
+examples/BasicOperations/GetKeywords.php
+examples/Planning/GenerateKeywordIdeas.php
+*.php
